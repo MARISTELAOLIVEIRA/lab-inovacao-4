@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- EDITE AQUI: título e descrição da disciplina -->
+  <title>Laboratório de Inovação IV · Stela</title>
+  <meta name="description" content="Laboratório de Inovação IV: protótipos para desafios reais, Design Thinking, sprints, Feira de Tecnologia e documentação. ADS, 4º semestre, Senac DF. Profa. Maristela.">
+
+  <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <script src="assets/js/placa.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@100..125,400..900&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/estilo.css">
+  <link rel="stylesheet" href="assets/css/disciplina.css">
+  <link rel="stylesheet" href="assets/css/neon.css">
+  <link rel="stylesheet" href="assets/css/aula.css">
+</head>
+<body>
+
+  <!-- ===================== BARRA DO TOPO (igual em todos os sites) ===================== -->
+  <header class="barra">
+    <div class="envolve">
+      <div class="marcas">
+        <a class="marca" href="/" title="Portal da Stela">
+          <img src="assets/img/estrela.webp" alt="" width="26" height="24">
+          <span class="marca-texto">Stela</span>
+        </a>
+        <a class="marca-disc" href="./" title="Página inicial da disciplina">Lab IV</a>
+      </div>
+      <button type="button" class="btn-menu" id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav class="nav" id="menu" aria-label="Seções da disciplina">
+        <a href="#tema">O protótipo</a>
+        <a href="#ementa">Ementa</a>
+        <a href="#aulas">Aulas</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#bibliografia">Bibliografia</a>
+      </nav>
+      <div class="ajustes">
+        <button type="button" id="btn-tema" aria-label="Mudar para o tema claro">
+          <svg class="sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11Z"/></svg>
+        </button>
+        <button type="button" id="btn-fonte" aria-label="Aumentar o tamanho do texto">A+</button>
+        <button type="button" id="btn-movimento" aria-pressed="false">
+          <svg class="pausar" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+          <svg class="tocar" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg>
+          <span class="rotulo">Pausar animações</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ===================== ABERTURA ===================== -->
+    <section class="abertura">
+      <canvas class="chuva-matrix" aria-hidden="true"></canvas>
+      <div class="envolve abertura-grade">
+        <div>
+          <p class="trilha-migalhas" data-revela>
+            <a href="/">Stela</a> <span aria-hidden="true">/</span>
+            <a href="/#cursos">ADS</a> <span aria-hidden="true">/</span>
+            <span>Laboratório de Inovação IV</span>
+          </p>
+
+          <!-- EDITE AQUI: nome oficial da disciplina e o título de boas-vindas -->
+          <p class="nome-oficial etiqueta ouro" data-revela style="--i:1">Laboratório de Inovação IV</p>
+          <h1 data-revela style="--i:1">Bem-vindos à oficina dos <span class="neon">protótipos</span></h1>
+          <p class="subtitulo" data-revela style="--i:2">A tecnologia que vocês estudaram vira solução, sobe no palco da Feira e fica documentada.</p>
+          <p class="chamada" data-revela style="--i:3">
+            Este é o momento de juntar tudo o que vocês aprenderam no curso num projeto real. Cada grupo escolhe um
+            desafio de verdade do Senac, do Sesc ou da Fecomércio, entende o problema com Design Thinking, organiza
+            o trabalho em sprints, constrói um protótipo funcional (de preferência com IA), testa com quem vai usar
+            e apresenta na Feira de Tecnologia, com a documentação no GitHub.
+          </p>
+
+          <div class="acoes" data-revela style="--i:4">
+            <a class="botao" href="#aulas">Ver as aulas</a>
+            <a class="botao contorno" href="#ementa">Ver a ementa</a>
+          </div>
+        </div>
+
+        <!-- EDITE AQUI: janela de boas-vindas -->
+        <div class="vitrine" data-revela style="--i:2">
+          <span class="tec logo-flutua neon-halo" title="GitHub"><img src="assets/img/tec/github.svg" alt="" width="64" height="64"></span>
+          <div class="janela">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">projeto — bash</span>
+            </div>
+            <pre class="codigo" aria-label="Comandos git que fecham a sprint e marcam a versão da Feira"><code><span class="linha"><span class="num">1</span><span class="com"># do radar à feira</span></span><span class="linha"><span class="num">2</span>git checkout -b sprint-3</span><span class="linha"><span class="num">3</span>git commit -m <span class="str">"protótipo estável"</span></span><span class="linha"><span class="num">4</span>git push origin sprint-3</span><span class="linha"><span class="num">5</span></span><span class="linha"><span class="num">6</span>git tag v1.0 -m <span class="str">"feira"</span></span><span class="linha"><span class="num">7</span><span class="com"># bora apresentar</span></span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RAIO-X DO TEMA ===================== -->
+    <section class="bloco alt" id="tema">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">P1 · raio-x do tema</span>
+          <h2>Do problema ao protótipo</h2>
+          <p>
+            Inovação não é só criar algo novo: é resolver um problema real de um jeito melhor. O semestre segue o
+            caminho de qualquer equipe de produto, uma etapa de cada vez.
+          </p>
+        </div>
+
+        <ol class="fluxo" aria-label="O caminho do semestre" data-revela>
+          <li><strong>Desafio</strong><span>Um problema real, entendido com Design Thinking.</span></li>
+          <li><strong>Sprints</strong><span>Backlog, prova de conceito e protótipo funcional.</span></li>
+          <li><strong>Testes</strong><span>Quem testa é quem vai usar.</span></li>
+          <li><strong>Feira e docs</strong><span>Apresentação ao público e documentação no GitHub.</span></li>
+        </ol>
+
+        <div class="curiosidades">
+          <div class="cartao destaque luz" data-revela>
+            <span class="olho">C1 · validar cedo</span>
+            <span class="numero">5 mil → 75 mil</span>
+            <h3>inscritos em uma noite, com um vídeo</h3>
+            <p>Antes de o produto ficar pronto, o Dropbox mostrou num vídeo curto como ele ia funcionar. A lista de espera explodiu: a ideia estava validada.</p>
+            <p class="fonte">Fonte: <a href="https://yourstory.com/2026/02/dropbox-fake-demo-video-75k-signups-mvp">YourStory</a>.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:1">
+            <span class="olho">C2 · empatia</span>
+            <h3>O tomógrafo que virou navio pirata</h3>
+            <p>Na GE, observar crianças com medo mudou o projeto de uma máquina de ressonância. Design Thinking em ação.</p>
+            <p class="fonte">Fonte: <a href="https://www.ideou.com/blogs/inspiration/from-design-thinking-to-creative-confidence">IDEO U</a>.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:2">
+            <span class="olho">C3 · testes</span>
+            <h3>Cinco usuários acham quase tudo</h3>
+            <p>Testar com 5 pessoas revela a maior parte dos problemas de usabilidade. Melhor vários testes pequenos que um grande.</p>
+            <p class="fonte">Fonte: <a href="https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/">Nielsen Norman Group</a>.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:1">
+            <span class="olho">C4 · ágil</span>
+            <h3>Sprints curtas, erros pequenos</h3>
+            <p>Histórias de usuário, backlog priorizado e o quadro no GitHub Projects: o time vê o que falta e corrige rápido.</p>
+          </div>
+          <div class="cartao luz" data-revela style="--i:2">
+            <span class="olho">C5 · LGPD</span>
+            <h3>Dado pessoal exige cuidado</h3>
+            <p>Em 2023, a ANPD aplicou a primeira multa da LGPD. Protótipo bom coleta só o que precisa.</p>
+          </div>
+          <div class="cartao inteiro luz" data-revela style="--i:3">
+            <span class="olho">C6 · de onde viemos</span>
+            <h3>O Radar do Lab II vira produto aqui</h3>
+            <p>As tecnologias pesquisadas no <a href="/lab-inovacao-2/">Laboratório de Inovação II</a> (IA, nuvem, IoT, cibersegurança e as outras) ganham aplicação prática num protótipo para um desafio real do Sistema Fecomércio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FICHA DA DISCIPLINA ===================== -->
+    <section class="bloco faixa" aria-label="Ficha da disciplina">
+      <div class="envolve">
+        <div class="ficha">
+          <div class="cartao" data-revela>
+            <span class="olho">Curso</span>
+            <strong>Análise e Desenvolvimento de Sistemas</strong>
+            <span>Faculdade de Tecnologia e Inovação Senac DF</span>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">Semestre</span>
+            <strong>4º semestre</strong>
+            <span>Noturno</span>
+          </div>
+          <div class="cartao" data-revela style="--i:2">
+            <span class="olho">Carga horária</span>
+            <strong>70 horas</strong>
+            <span>60h presenciais e 10h de estudo autônomo</span>
+          </div>
+          <a class="cartao luz" href="/" data-revela style="--i:3">
+            <span class="olho">Professora</span>
+            <strong>Maristela Oliveira</strong>
+            <span>ou só Stela</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EMENTA E OBJETIVOS ===================== -->
+    <section class="bloco alt" id="ementa">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">E1 · ementa</span>
+          <h2>Da tecnologia ao protótipo</h2>
+          <p>A ementa oficial, palavra por palavra. O resto do semestre é colocar isso em prática.</p>
+        </div>
+
+        <div class="ementa">
+          <div data-revela>
+            <!-- EDITE AQUI: ementa oficial (copie do plano de ensino, sem mudar) -->
+            <p class="ementa-texto">
+              Estudo mais aprofundado das tecnologias abordadas no Laboratório de Inovação II. Elaboração de protótipos
+              e soluções práticas, com base nas tecnologias estudadas. Realização de Feira de Tecnologia para apresentação
+              dos trabalhos. Confecção de documentação detalhada das soluções.
+            </p>
+            <div class="palavras" aria-label="Palavras-chave">
+              <span class="etiqueta ouro">Inovação</span>
+              <span class="etiqueta ouro">Aprofundamento tecnológico</span>
+              <span class="etiqueta ouro">Protótipos</span>
+              <span class="etiqueta ouro">Soluções práticas</span>
+              <span class="etiqueta ouro">Feira de Tecnologia</span>
+              <span class="etiqueta ouro">Documentação técnica</span>
+            </div>
+          </div>
+
+          <div class="janela" data-revela style="--i:1">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">objetivos.md</span>
+            </div>
+            <div class="janela-corpo">
+              <h3>Aonde a gente quer chegar</h3>
+              <p class="objetivo-geral">
+                Capacitar os alunos a aprofundar o estudo de tecnologias atuais e emergentes e a transformá-las em
+                protótipos e soluções práticas para problemas reais, apresentando os resultados em uma Feira de Tecnologia
+                e registrando-os em documentação técnica detalhada.
+              </p>
+              <ul class="lista-check">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Aprofundar o estudo técnico das tecnologias abordadas no Laboratório de Inovação II.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Elaborar protótipos e soluções práticas com base nas tecnologias estudadas.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Apresentar as soluções desenvolvidas em uma Feira de Tecnologia.</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Produzir documentação detalhada das soluções desenvolvidas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTEÚDO PROGRAMÁTICO ===================== -->
+    <section class="bloco" id="conteudo">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">U1–U4 · conteúdo programático</span>
+          <h2>Quatro unidades, um protótipo</h2>
+          <p>Cada unidade acrescenta uma etapa ao projeto do grupo.</p>
+        </div>
+        <div class="unidades">
+          <div class="cartao unidade" data-revela>
+            <div class="unidade-topo"><span class="olho">Unidade 1</span><span class="etiqueta">aulas 1 e 4</span></div>
+            <h3>Aprofundamento das Tecnologias</h3>
+            <p>Do estudo à prova de conceito.</p>
+            <ul><li>Retomada das tecnologias abordadas no Laboratório de Inovação II.</li><li>Estudo técnico aprofundado da tecnologia escolhida.</li><li>Provas de conceito.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:1">
+            <div class="unidade-topo"><span class="olho">Unidade 2</span><span class="etiqueta">aulas 2, 3, 5 a 8, 10, 11 e 13</span></div>
+            <h3>Elaboração de Protótipos e Soluções Práticas</h3>
+            <p>Do problema ao protótipo testado.</p>
+            <ul><li>Identificação do problema e definição da solução (Design Thinking).</li><li>Planejamento ágil e organização do trabalho em equipe.</li><li>Prototipação de baixa e alta fidelidade e testes com usuários.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:2">
+            <div class="unidade-topo"><span class="olho">Unidade 3</span><span class="etiqueta">aulas 14 e 16</span></div>
+            <h3>Feira de Tecnologia</h3>
+            <p>O protótipo diante do público.</p>
+            <ul><li>Planejamento e organização da Feira de Tecnologia.</li><li>Comunicação da solução: pitch, demonstração e materiais de divulgação.</li><li>Apresentação dos trabalhos ao público.</li></ul>
+          </div>
+          <div class="cartao unidade" data-revela style="--i:3">
+            <div class="unidade-topo"><span class="olho">Unidade 4</span><span class="etiqueta">aulas 9, 12 e 15</span></div>
+            <h3>Documentação Detalhada das Soluções</h3>
+            <p>Para outra pessoa conseguir continuar.</p>
+            <ul><li>Documentação técnica: arquitetura, instalação e uso.</li><li>Documentação no repositório (README e wiki).</li><li>Relato do processo, dos aprendizados e do uso da IA.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AULAS ===================== -->
+    <!--
+      EDITE AQUI: uma linha por aula, numerada e sem data (o material serve para vários semestres). Quando a página da aula existir, coloque o link no título
+      (<a href="aulas/aula-NN.html">) e a etiqueta "abrir a aula →" no fim da linha de datas.
+    -->
+    <section class="bloco alt" id="aulas">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">A1–A18 · aulas</span>
+          <h2>Dezoito encontros, um plano de negócio</h2>
+          <p>Cada aula tem a sua página, com conceitos, estudo de caso e o que entregar.</p>
+        </div>
+        <ol class="log lista-aulas" data-revela>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-01.html">Do estudo à solução: conhecendo o Laboratório de Inovação IV</a></h3><span class="hash">A01</span></div>
+            <div class="meta"><span>Apresentação vivencial</span> <a class="etiqueta ouro" href="aulas/aula-01.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-02.html">Escolhendo o desafio</a></h3><span class="hash">A02</span></div>
+            <div class="meta"><span>Situação-problema</span> <a class="etiqueta ouro" href="aulas/aula-02.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-03.html">Imersão no problema com Design Thinking</a></h3><span class="hash">A03</span></div>
+            <div class="meta"><span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-03.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-04.html">Aprofundamento tecnológico e prova de conceito</a></h3><span class="hash">A04</span></div>
+            <div class="meta"><span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-04.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-05.html">Ideação, definição da solução e requisitos</a></h3><span class="hash">A05</span></div>
+            <div class="meta"><span>Projeto</span> <a class="etiqueta ouro" href="aulas/aula-05.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-06.html">Planejamento ágil: histórias, backlog e sprint</a></h3><span class="hash">A06</span></div>
+            <div class="meta"><span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-06.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-07.html">Protótipo de baixa fidelidade</a></h3><span class="hash">A07</span></div>
+            <div class="meta"><span>Laboratório de práticas</span> <a class="etiqueta ouro" href="aulas/aula-07.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3><a href="aulas/aula-08.html">Sprint 1 e apresentação da prova de conceito</a></h3><span class="hash">A08</span></div>
+            <div class="meta"><span>Amostra de trabalho</span> <a class="etiqueta ouro" href="aulas/aula-08.html">abrir a aula →</a></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Entrega do 1º bimestre: registro no Loop e no README.md</h3><span class="hash">A09</span></div>
+            <div class="meta"><span>Amostra de trabalho</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Sprint 2: protótipo funcional</h3><span class="hash">A10</span></div>
+            <div class="meta"><span>Projeto</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Testes com usuários</h3><span class="hash">A11</span></div>
+            <div class="meta"><span>Laboratório de práticas</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Documentação técnica da solução</h3><span class="hash">A12</span></div>
+            <div class="meta"><span>Laboratório de práticas</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Sprint 3: finalização do protótipo</h3><span class="hash">A13</span></div>
+            <div class="meta"><span>Projeto</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Ética, segurança e preparação para a Feira</h3><span class="hash">A14</span></div>
+            <div class="meta"><span>Projeto</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Ensaio geral e documentação final</h3><span class="hash">A15</span></div>
+            <div class="meta"><span>Projeto</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Feira de Tecnologia e avaliação do 2º bimestre</h3><span class="hash">A16</span></div>
+            <div class="meta"><span>Exposição prática</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Devolutiva, recuperação de entregas e portfólio no GitHub</h3><span class="hash">A17</span></div>
+            <div class="meta"><span>Devolutiva</span></div>
+          </li>
+          <li class="commit">
+            <div class="commit-linha"><h3>Recuperação final e encerramento</h3><span class="hash">A18</span></div>
+            <div class="meta"><span>Encerramento</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== COMO AS AULAS FUNCIONAM ===================== -->
+    <section class="bloco" id="metodo">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">M1 · metodologia</span>
+          <h2>Entender, construir, testar, mostrar</h2>
+        </div>
+        <div class="metodo">
+          <div class="texto" data-revela>
+            <p>
+              Design Thinking para entender o problema, práticas ágeis para construir (sprints curtas, histórias de
+              usuário e o quadro no GitHub Projects) e testes com quem vai usar. Toda aula tem um estudo de caso.
+            </p>
+            <p>
+              O GitHub Copilot e o Copilot do Microsoft 365 ajudam no código e na escrita, com diário do que foi
+              aceito e corrigido. O estudo autônomo (10h) é um curso de plataforma parceira e uma seção da
+              documentação, escrita por cada um. O semestre fecha na Feira de Tecnologia.
+            </p>
+            <p class="citacao">Curto-circuito? Volta uma etapa: quase sempre o problema estava no entendimento, não no código.</p>
+          </div>
+          <div class="janela" data-revela style="--i:1">
+            <div class="janela-barra">
+              <span class="semaforo" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="janela-titulo">ferramentas</span>
+            </div>
+            <div class="janela-corpo">
+              <p class="prompt" aria-hidden="true"><b>stela@placa</b> <span>~/lab4</span> $ ls ferramentas/</p>
+              <div class="ferramentas">
+                <span class="etiqueta"><span class="tec" title="GitHub"><img src="assets/img/tec/github.svg" alt="" width="32" height="32"></span>GitHub Pages</span>
+                <span class="etiqueta"><span class="tec" title="VS Code"><img src="assets/img/tec/vscode.svg" alt="" width="32" height="32"></span>VS Code</span>
+                <span class="etiqueta"><span class="tec" title="Azure"><img src="assets/img/tec/azure.svg" alt="" width="32" height="32"></span>Microsoft Learn</span>
+                <span class="etiqueta">GitHub Projects e Codespaces</span>
+                <span class="etiqueta">Copilot do Microsoft 365</span>
+                <span class="etiqueta">Teams, Loop e Whiteboard</span>
+                <span class="etiqueta"><span class="tec" title="Moodle"><img src="assets/img/tec/moodle.svg" alt="" width="32" height="32"></span>Moodle</span>
+                <span class="etiqueta verde">IA com diário de uso</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVALIAÇÃO ===================== -->
+    <section class="bloco alt" id="avaliacao">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">A1 · avaliação</span>
+          <h2>Como a nota é montada</h2>
+          <p>Dez pontos por bimestre. Aqui não tem prova: a nota vem do protótipo.</p>
+        </div>
+        <div class="avaliacao">
+          <div class="cartao" data-revela>
+            <span class="olho">1º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:4"></span><span style="--pts:6"></span></div>
+            <ul class="partes">
+              <li><span>Prova de conceito (atividade avaliativa prática)</span><strong>4,0</strong></li>
+              <li><span>Entregas com explicação no Loop e no README.md</span><strong>6,0</strong></li>
+            </ul>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">2º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:7"></span><span style="--pts:2"></span><span style="--pts:1"></span></div>
+            <ul class="partes">
+              <li><span>Protótipo, Feira de Tecnologia e documentação</span><strong>7,0</strong></li>
+              <li><span>Avaliação Integrada</span><strong>2,0</strong></li>
+              <li><span>Participação na Jornada Interdisciplinar</span><strong>1,0</strong></li>
+            </ul>
+          </div>
+        </div>
+        <p class="aprovacao" data-revela>Para ser aprovado: média final de 6,0 e pelo menos 75% de frequência.</p>
+      </div>
+    </section>
+
+    <!-- ===================== BIBLIOGRAFIA ===================== -->
+    <section class="bloco" id="bibliografia">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">B1 · bibliografia</span>
+          <h2>Para ir além da aula</h2>
+        </div>
+        <div class="biblio">
+          <div class="cartao" data-revela>
+            <span class="olho">Básica</span>
+            <ol>
+              <li><strong>Gestão do amanhã</strong>MAGALDI, Sandro. Gestão do amanhã: tudo o que você precisa saber sobre gestão, inovação e liderança para vencer na 4ª revolução industrial. São Paulo, 2018.</li>
+              <li><strong>Inovação com resultado</strong>KOULOPOULOS, Thomas M. Inovação com resultado: o olhar além do óbvio. São Paulo: Gente; Senac SP, 2011.</li>
+              <li><strong>Criatividade e inovação</strong>PEARSON, Biblioteca Universitária. Criatividade e inovação. São Paulo: Pearson, 2011.</li>
+            </ol>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">Complementar</span>
+            <ol>
+              <li><strong>As regras da inovação</strong>DAVILA, Tony. Porto Alegre: Bookman, 2007.</li>
+              <li><strong>A bíblia da inovação</strong>TRÍAS DE BES, Fernando; KOTLER, Philip. São Paulo: Leya, 2011.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="envolve">
+      <div class="rodape-grade">
+        <div class="rodape-marca">
+          <img src="assets/img/coracao.webp" alt="" width="40" height="38">
+          <strong>Laboratório de Inovação IV</strong>
+          <span>Uma disciplina do curso de ADS da Faculdade de Tecnologia e Inovação Senac DF, em Taguatinga.</span>
+        </div>
+        <nav aria-label="Nesta disciplina">
+          <h2>Nesta disciplina</h2>
+          <ul>
+            <li><a href="#tema">Do problema ao protótipo</a></li>
+            <li><a href="#ementa">Ementa e objetivos</a></li>
+            <li><a href="#aulas">Aulas</a></li>
+            <li><a href="#avaliacao">Avaliação</a></li>
+            <li><a href="#bibliografia">Bibliografia</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Outras disciplinas">
+          <h2>Outras disciplinas</h2>
+          <ul>
+            <li><a href="/prog-web-js/">Programação Web em JavaScript</a></li>
+            <li><a href="/prog-web-php/">Web II: PHP</a></li>
+            <li><a href="/lab-inovacao-3/">Laboratório de Inovação III</a></li>
+            <li><a href="/lab-inovacao-2/">Laboratório de Inovação II</a></li>
+            <li><a href="/Python-Logica/">Lógica de Programação com Python</a></li>
+            <li><a href="/seguranca-nuvem/">Segurança em Nuvem</a></li>
+            <li><a href="/adm-recursos/">Administração de Recursos Computacionais</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Professora">
+          <h2>Professora</h2>
+          <ul>
+            <li><a href="/">Portal da Stela</a></li>
+            <li><a href="/#cursos">Cursos e turmas</a></li>
+            <li><a href="/#neuro">Neurodiversidade</a></li>
+            <li><a href="/#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="rodape-fim">
+        <span>Feito com ♥ e sucata eletrônica.</span>
+        <span>git tag v1.0 -m "feira"</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/aulas.js"></script>
+  <script src="assets/js/matrix.js"></script>
+</body>
+</html>
