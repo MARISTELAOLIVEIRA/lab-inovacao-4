@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Laboratório de Inovação IV · Do problema ao protótipo · Profa. Maristela · Senac DF</title>
+  <desc id="descricao">Banner: o título em coral e ciano, ao lado de uma janela com o quadro do projeto (backlog, sprint e Feira), um foguete decolando e o comando git tag v1.0 da Feira de Tecnologia.</desc>
+
+  <defs>
+    <!-- Brilhos do fundo: coral à esquerda, ciano à direita -->
+    <radialGradient id="brilhoCoral" cx="6%" cy="15%" r="65%">
+      <stop offset="0" stop-color="#FF6B5A" stop-opacity=".40"/>
+      <stop offset="1" stop-color="#FF6B5A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="brilhoCiano" cx="92%" cy="110%" r="55%">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="placa" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0 30 H22 L30 22 V0 M60 40 H42 L36 46 V60" fill="none" stroke="#FF6B5A" stroke-opacity=".07" stroke-width="2"/>
+      <circle cx="30" cy="22" r="3" fill="#FF6B5A" fill-opacity=".1"/>
+      <circle cx="36" cy="46" r="3" fill="#FF6B5A" fill-opacity=".1"/>
+    </pattern>
+    <filter id="neon" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="borrado"/>
+      <feMerge><feMergeNode in="borrado"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1200" height="360" rx="18" fill="#141A2B"/>
+  <rect width="1200" height="360" rx="18" fill="url(#placa)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#brilhoCoral)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#brilhoCiano)"/>
+
+  <!-- Título -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="64" y="88" font-size="21" fill="#A9B3CC" letter-spacing="3">ADS · 4º SEMESTRE · SENAC DF</text>
+    <text x="62" y="156" font-size="62" font-weight="800" fill="#FF8A7A" filter="url(#neon)">Do problema</text>
+    <text x="62" y="224" font-size="62" font-weight="800" fill="#22D3EE" filter="url(#neon)">ao protótipo</text>
+    <text x="64" y="276" font-size="22" fill="#E2E8F0">Laboratório de Inovação IV: Design Thinking,</text>
+    <text x="64" y="306" font-size="22" fill="#E2E8F0">sprints, testes e a Feira de Tecnologia.</text>
+  </g>
+
+  <!-- Janela: o quadro do projeto -->
+  <g transform="translate(660 40)">
+    <rect width="480" height="280" rx="12" fill="#0F1424" stroke="#2E3656" stroke-width="2"/>
+    <rect width="480" height="38" rx="12" fill="#1B2238"/>
+    <rect y="26" width="480" height="12" fill="#1B2238"/>
+    <circle cx="22" cy="19" r="7" fill="#FF5F57"/>
+    <circle cx="44" cy="19" r="7" fill="#FEBC2E"/>
+    <circle cx="66" cy="19" r="7" fill="#28C840"/>
+    <text x="240" y="25" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="15" fill="#A9B3CC">projeto — quadro da sprint</text>
+
+    <!-- Colunas -->
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700">
+      <text x="20" y="66" fill="#A9B3CC">BACKLOG</text>
+      <text x="140" y="66" fill="#A9B3CC">SPRINT 3</text>
+      <text x="260" y="66" fill="#A9B3CC">FEIRA</text>
+    </g>
+    <path d="M128 52 V200 M248 52 V200" stroke="#2E3656" stroke-width="1.5"/>
+
+    <!-- Cartões (post-its) -->
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#141A2B">
+      <rect x="18" y="78" width="98" height="34" rx="5" fill="#FFD166"/>
+      <text x="28" y="100">testar com 5</text>
+      <rect x="18" y="120" width="98" height="34" rx="5" fill="#FFD166" opacity=".75"/>
+      <text x="28" y="142">README</text>
+
+      <rect x="138" y="78" width="98" height="34" rx="5" fill="#22D3EE"/>
+      <text x="148" y="100">protótipo</text>
+      <rect x="138" y="120" width="98" height="34" rx="5" fill="#22D3EE" opacity=".75"/>
+      <text x="148" y="142">PoC ✔</text>
+
+      <rect x="258" y="78" width="98" height="34" rx="5" fill="#FF8A7A"/>
+      <text x="268" y="100">pitch</text>
+    </g>
+
+    <!-- Foguete decolando -->
+    <g transform="translate(420 128) rotate(20)">
+      <path d="M0 -58 C14 -46 20 -30 20 -12 V12 H-20 V-12 C-20 -30 -14 -46 0 -58 Z" fill="#1B2238" stroke="#FF6B5A" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="0" cy="-22" r="7" fill="#0F1424" stroke="#22D3EE" stroke-width="3"/>
+      <path d="M-20 -4 L-34 10 V24 L-20 16 M20 -4 L34 10 V24 L20 16" fill="none" stroke="#FF6B5A" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M-10 16 C-10 30 -4 40 0 46 C4 40 10 30 10 16" fill="#FFD166" filter="url(#neon)"/>
+    </g>
+
+    <!-- Terminal -->
+    <rect x="14" y="214" width="452" height="52" rx="8" fill="#0A0E1A"/>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+      <text x="28" y="246"><tspan fill="#22D3EE">stela@placa</tspan><tspan fill="#A9B3CC"> ~/app $ </tspan><tspan fill="#E2E8F0">git tag v1.0 -m </tspan><tspan fill="#FFD166">"feira"</tspan></text>
+      <rect x="436" y="233" width="10" height="17" fill="#22D3EE"/>
+    </g>
+  </g>
+</svg>
