@@ -103,7 +103,7 @@ d4c7f04  Unidade 4 · documentação detalhada das soluções   # aulas 9, 12 e 
 
 | Ferramenta | Para quê |
 |---|---|
-| 🐙 **GitHub Pages** | Pôr páginas no ar direto do repositório. |
+| <img src="https://maristelaoliveira.github.io/assets/img/octocat-stela.webp" width="22" height="22" alt="Octocat da Stela" align="absmiddle"> **GitHub Pages** | Pôr páginas no ar direto do repositório. |
 | 📋 **GitHub Projects e Codespaces** | O quadro das sprints (o time vê o que falta) e o ambiente de desenvolvimento na nuvem. |
 | 💻 **VS Code** | Construir o protótipo. |
 | 📘 **Microsoft Learn** | Aprofundar a tecnologia do grupo. |
